@@ -1,0 +1,94 @@
+.line1{
+    fill: none;
+    stroke: #AAA139;
+    stroke-width: 2px;
+}
+
+.line2{
+    fill: none;
+    stroke: #324575;
+    stroke-width: 2px;
+}
+
+.line3{
+    fill: none;
+    stroke: #943156;
+    stroke-width: 2px;
+}
+
+.dot{
+    fill: #324575;
+}
+
+circle{
+    fill: #324575;
+}
+
+.grid line {
+    stroke: lightgrey;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+  }
+
+.dropdown-trigger{
+    width: 450px;
+    margin: 0px 10px;
+}
+
+.multi_scatter{
+    display: inline-block;
+}
+
+#svg-holder{
+    margin: auto;
+    width: 1650px;
+}
+
+#svg-holder-scattermat{
+    margin: auto;
+    width: 900px;
+}
+
+#header{
+    background-color: #00756e;
+    width: 100%;
+    padding: 15px;
+}
+
+#ddm_holder{
+    width: 950px;
+    margin: auto;
+}
+
+#footer{
+position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #00756e;
+   color: white;
+   text-align: center;
+}
+
+#assignment_info{
+    display: inline;
+}
+
+rect.frame{
+    fill:none;
+}
+
+.attr_text{
+    fill: #943156;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#svg-holder-scattermat .tick{
+    opacity: 0.4;
+}
+
+.axis-titles{
+    fill: #943156;
+    font-weight: bold;
+}

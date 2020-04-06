@@ -5,5 +5,18 @@
 {% endblock %}
 
 {% block body %}
-    {data}
+
+
+    <script src="{{url_for('static', filename='js/pca_graph.js')}}"></script>
+    <script src="{{url_for('static', filename='js/pca_scatter.js')}}"></script>
+    <script src="{{url_for('static', filename='js/pca_top3_scatter.js')}}"></script>
+    <script>
+            make_ScreePlot();
+    </script>
+
+    <div id="svg-holder">
+        <div id="svg-holder-scattermat">
+        </div>        
+    </div>
+
 {% endblock %}

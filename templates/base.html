@@ -4,11 +4,69 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="=width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://d3js.org/d3.v4.js"></script>
         <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
         {% block head %}{% endblock %}
     </head>
     
     <body>
+
+        <div id="header"> 
+
+            <div id="ddm_holder">   
+
+                <!-- Dropdown Trigger -->
+                <a id='main_ddm' class='dropdown-trigger btn' href='#' data-target='dropdown_main'>Scree Plot for 3 Datasets</a>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown_main' class='dropdown-content'>
+                    <li><a href="#!" class="main_ddm_val" sec_ddm="false" func="1">Scree Plot for 3 Datasets</a></li>
+                    <li><a href="#!" class="main_ddm_val" sec_ddm="false" func="2">Scatter plots for Top 2 PCs</a></li>
+                    <li><a href="#!" class="main_ddm_val" sec_ddm="false" func="3">Scatter plots MDS (Euclidian) of 3 Datasets</a></li>
+                    <li><a href="#!" class="main_ddm_val" sec_ddm="false" func="4">Scatter plots MDS (Correlation) of 3 Datasets</a></li>
+                    <li><a href="#!" class="main_ddm_val" sec_ddm="true" func="5">Scatter plots for Top 3 Attributes</a></li>
+                </ul>
+
+                <!-- Dropdown Trigger -->
+                <a id='dataset_ddm' class='dropdown-trigger btn' href='#' data-target='dropdown_dataset'>Main Dataset</a>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown_dataset' class='dropdown-content'>
+                    <li><a href="#!" class="dataset_ddm_val" d_set="0">Main Dataset</a></li>
+                    <li><a href="#!" class="dataset_ddm_val" d_set="1">Random Sampled Dataset</a></li>
+                    <li><a href="#!" class="dataset_ddm_val" d_set="2">Stratified Sampled Dataset</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <script>
+
+            $( document ).ready(function() {
+                $('.dropdown-trigger').dropdown();
+            });
+
+        </script>
+
+        <script src="{{url_for('static', filename='js/UI_Control.js')}}"></script>
+        
+
         {% block body %}{% endblock %}
+
+        <div id="footer">
+            <div id="assignment_info">
+                CSE-564 || Assignment 2 || Omkar Bhatt (112715227)
+            </div>
+        </div>
+
+        
     </body>
 </html>
