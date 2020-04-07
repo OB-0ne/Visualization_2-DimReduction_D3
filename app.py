@@ -14,7 +14,7 @@ app = Flask(__name__)
 try:
     data_onehot = pd.read_csv("data/main_data_onehot.csv")
 except:
-    data_file = "data/bgg_db_2018_01.csv"
+    data_file = "data/PS2_GameSales.csv"
     make_data(data_file)
 
 #read data files

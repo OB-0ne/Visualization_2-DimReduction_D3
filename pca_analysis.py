@@ -54,7 +54,6 @@ def get_indim_cumindim(data):
 
     #get the column length
     col_len = len(data.columns)
-    #col_len = 16
 
     #get the pca for the data
     pca = PCA(n_components= col_len)
@@ -72,6 +71,6 @@ def get_indim_cumindim(data):
     pca_top2list = pd.DataFrame(data = principalComponents, columns = get_PC_cols(len(principalComponents[0])))
     pca_top2list = pca_top2list[['PC1','PC2']].values.tolist()
 
-    top3 = data[get_top3att(pca,data.columns, 5)].to_dict('records')
+    top3 = data[get_top3att(pca,data.columns, 4)].to_dict('records')
 
     return dimensionality, cum_dimensionality, pca_top2list, top3
